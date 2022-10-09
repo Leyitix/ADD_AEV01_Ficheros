@@ -25,7 +25,7 @@ public class Modelo {
 	private String ficheroLectura, ficheroEscritura, palabraBuscada;
 
 	/**
-	 * Método constructor del modelo que inicializa el ficheroLectura y el
+	 * Metodo constructor del modelo que inicializa el ficheroLectura y el
 	 * ficheroEscritura
 	 */
 	public Modelo() {
@@ -34,9 +34,9 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que lista el contenido del directorio al que tiene acceso el usuario
+	 * Metodo que lista el contenido del directorio al que tiene acceso el usuario
 	 * 
-	 * @return retorna el listado de directorios que se mostraran el en combobox de
+	 * @return Retorna el listado de directorios que se mostraran el en combobox de
 	 *         los directorios
 	 */
 	public String[] mostrarDirectorios() {
@@ -48,10 +48,10 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que lista el contenido del directorio seleccionado del combobox
+	 * Metodo que lista el contenido del directorio seleccionado del combobox
 	 * 
-	 * @param recibe el String directorioSeleccionado del controlador
-	 * @return retorna el listado de ficheros que se encuentran en el directorio
+	 * @param Recibe el String directorioSeleccionado del controlador
+	 * @return Retorna el listado de ficheros que se encuentran en el directorio
 	 *         seleccionado
 	 */
 	public String[] mostrarFicheros(String directorioSeleccionado) {
@@ -63,10 +63,10 @@ public class Modelo {
 	}
 
 	/**
-	 * Método lee el contenido del fichero seleccionado
+	 * Metodo lee el contenido del fichero seleccionado
 	 * 
-	 * @param recibe el String directorio y el String fichero dede el controlador
-	 * @return retorna ArrayList<String> contenidoFichero para poder mostratlo en el
+	 * @param Reecibe el String directorio y el String fichero dede el controlador
+	 * @return Retorna ArrayList<String> contenidoFichero para poder mostratlo en el
 	 *         textArea
 	 */
 	public ArrayList<String> contenidoFichero(String directorio, String fichero) {
@@ -99,10 +99,10 @@ public class Modelo {
 	}
 
 	/**
-	 * Lista una serie de caracteríasticas del fichero recibido desde el controlador
+	 * Lista una serie de caracteristicas del fichero recibido desde el controlador
 	 * 
-	 * @param recibe el String directorio y el String fichero dede el controlador
-	 * @return retorna ArrayList<String> info para mostrar las características del
+	 * @param Recibe el String directorio y el String fichero dede el controlador
+	 * @return Retorna ArrayList<String> info para mostrar las caracteristicas del
 	 *         fichero en un textArea
 	 */
 	public ArrayList<String> infoFichero(String directorio, String fichero) {
@@ -127,8 +127,8 @@ public class Modelo {
 	}
 
 	/**
-	 * Lista una serie de caracteríasticas del fichero recibido desde el controlador
-	 * Si el fichero existe lanzará un error, en caso contrario lo creará
+	 * Lista una serie de caracteriasticas del fichero recibido desde el controlador
+	 * Si el fichero existe lanzara un error, en caso contrario lo creara
 	 * 
 	 * @param recibe el String directorio y el String ficheroEscritura
 	 */
@@ -155,14 +155,14 @@ public class Modelo {
 	}
 
 	/**
-	 * Renombra el nombre de un determinado fichero LLama a un método
-	 * ventanadeConfirmación que genera un popUp, si el usuario acepta se renombra
-	 * el fichero, en caso contrario se cancela la acción
+	 * Renombra el nombre de un determinado fichero llama a un metodo ventana de
+	 * confirmacion que genera un popup, si el usuario acepta se renombra el
+	 * fichero, en caso contrario se cancela la accion
 	 * 
-	 * @param recibe el String oldFile que contiene el nombre del fichero original,
+	 * @param Recibe el String oldFile que contiene el nombre del fichero original,
 	 *               el String newFile con el nuevo nombre del .txt y el directorio
 	 *               seleccionado
-	 * @return retorna un null
+	 * @return Retorna un null
 	 */
 	public String renombrarFichero(String oldFile, String newFile, String directorio) {
 
@@ -192,12 +192,12 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que se utiliza para generar la copia de un fichero Añade la extensión
-	 * _copia.txt a un nuevo fichero en el que copia el contienido del original Si
-	 * el redultado es exitoso lanza un popup informativo, en caso contrario muestra
+	 * Metodo que se utiliza para generar la copia de un fichero Añade la extension
+	 * _copia.txt a un nuevo fichero en el que copia el contienido del original si
+	 * el resultado es exitoso lanza un popup informativo, en caso contrario muestra
 	 * un error
 	 * 
-	 * @param recibe String directorio y el String fichero
+	 * @param Recibe String directorio y el String fichero
 	 */
 	public void copiarFichero(String directorio, String fichero) {
 
@@ -234,8 +234,8 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que elimina un determinado fichero Mostrará un mensaje dependiendo del
-	 * resultado
+	 * Metodo que elimina un determinado fichero, mostrara un mensaje dependiendo
+	 * del resultado
 	 * 
 	 * @param recibe String directorio y el String fichero
 	 */
@@ -261,10 +261,10 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que inserta un texto en un fichero seleccionado Mostrará un mensaje
+	 * Metodo que inserta un texto en un fichero seleccionado, mostrara un mensaje
 	 * dependiendo del resultado
 	 * 
-	 * @param recibe String directorio, el String fichero y el texto del TextArea
+	 * @param Recibe String directorio, el String fichero y el texto del TextArea
 	 */
 	public void escribirEnFichero(String directorio, String fichero, String textoTextArea) {
 
@@ -297,12 +297,12 @@ public class Modelo {
 	}
 
 	/**
-	 * Método que busca ocurrencias dentro de un determinado fichero mediante el
-	 * método indexOf Cuenta el número de veces que la palabra aparece en el texto
-	 * Mediante un if controlo e mensaje que se muestra en el popup dependiendo del
-	 * número de ocurrencias Mostrará un mensaje dependiendo del resultado
+	 * Metodo que busca ocurrencias dentro de un determinado fichero mediante el
+	 * metodo indexOf, cuenta el numero de veces que la palabra aparece en el texto,
+	 * mediante un if controlo e mensaje que se muestra en el popup dependiendo del
+	 * numero de ocurrencias, mostrara un mensaje dependiendo del resultado
 	 * 
-	 * @param recibe String directorio, el String fichero, el String texto a buscar
+	 * @param Recibe String directorio, el String fichero, el String texto a buscar
 	 *               la clase Highlighter para subrayar las palabras encontradas
 	 */
 	public void buscarOcurrencias(String directorio, String fichero, String texto, Highlighter highlighter) {
@@ -362,10 +362,13 @@ public class Modelo {
 	}
 
 	/**
-	 * Método con el que se reemplazara el nombre del fichero seleccionado Llamará
-	 * al metodo ventanadeConfirmación en el que se controlará si se quiere
-	 * sobreescribir el fichero o crear una copia Mostrará un mensaje dependiendo
+	 * Metodo con el que se reemplazara el nombre del fichero seleccionado, llamara
+	 * al metodo ventana de confirmacion en el que se controlara si se quiere
+	 * sobreescribir el fichero o crear una copia, mostrara un mensaje dependiendo
 	 * del resultado
+	 * 
+	 * @param Recibe como parametro el String del directorio, del fichero
+	 *               seleccionado y del texto a reemplazar
 	 */
 	public void reemplazarString(String directorio, String fichero, String textoReemplazar) {
 
@@ -444,12 +447,12 @@ public class Modelo {
 	}
 
 	/**
-	 * Con este método se genera una ventana de confirmación con opciones si o no,
-	 * el si retornará un 0 y el no un 1
+	 * Con este metodo se genera una ventana de confirmacion con opciones si o no,
+	 * el si retornara un 0 y el no un 1
 	 * 
-	 * @param recibe el nombre del método que hace la llamada a la ventana de
-	 *               confirmación
-	 * @return retorna la información de si el usuario a pulsado en si o en no
+	 * @param Recibe el nombre del metodo que hace la llamada a la ventana de
+	 *               confirmacion
+	 * @return Retorna la informacion de si el usuario a pulsado en si o en no
 	 */
 	public String ventanaConfirmacion(String metodo) {
 
@@ -480,48 +483,48 @@ public class Modelo {
 	}
 
 	/**
-	 * get del ficheroLectura
+	 * Get del ficheroLectura
 	 * 
-	 * @retorna el fichero lectura
+	 * @return Del fichero lectura
 	 */
 	public String getFicheroLectura() {
 		return ficheroLectura;
 	}
 
 	/**
-	 * set del ficheroLectura
+	 * Set del ficheroLectura
 	 */
 	public void setFicheroLectura(String ficheroLectura) {
 		this.ficheroLectura = ficheroLectura;
 	}
 
 	/**
-	 * get del ficheroEscritura
+	 * Get del ficheroEscritura
 	 * 
-	 * @retorna el fichero escritura
+	 * @return Del fichero escritura
 	 */
 	public String getFicheroEscritura() {
 		return ficheroEscritura;
 	}
 
 	/**
-	 * set del ficheroEscritura
+	 * Set del ficheroEscritura
 	 */
 	public void setFicheroEscritura(String ficheroEscritura) {
 		this.ficheroEscritura = ficheroEscritura;
 	}
 
 	/**
-	 * get de la palabra buscada
+	 * Get de la palabra buscada
 	 * 
-	 * @retorna la palabra buscada
+	 * @return De la palabra buscada
 	 */
 	public String getPalabraBuscada() {
 		return palabraBuscada;
 	}
 
 	/**
-	 * set de la palabra buscada
+	 * Set de la palabra buscada
 	 */
 	public void setPalabraBuscada(String palabraBuscada) {
 		this.palabraBuscada = palabraBuscada;

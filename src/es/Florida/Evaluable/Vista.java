@@ -26,15 +26,15 @@ public class Vista {
 	private JScrollPane scrollPane_3;
 
 	/**
-	 * Método constructor de la clase Vista Se inicializan todos los elementos de la
-	 * interfaz gráfica
+	 * Metodo constructor de la clase Vista, se inicializan todos los elementos de
+	 * la interfaz grafica
 	 */
 	public Vista() {
 		initialize();
 	}
 
 	/**
-	 * Método en el que se recogen todos los elementos de la interfaz
+	 * Metodo en el que se recogen todos los elementos de la interfaz
 	 */
 	private void initialize() {
 		frame = new JFrame();
@@ -100,11 +100,11 @@ public class Vista {
 		JScrollPane scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(25, 42, 356, 224);
 		frame.getContentPane().add(scrollPane_2);
-		
-				textArea_info = new JTextArea();
-				scrollPane_2.setViewportView(textArea_info);
-				textArea_info.setLineWrap(true);
-				textArea_info.setRows(12);
+
+		textArea_info = new JTextArea();
+		scrollPane_2.setViewportView(textArea_info);
+		textArea_info.setLineWrap(true);
+		textArea_info.setRows(12);
 
 		scrollPane_3 = new JScrollPane();
 		scrollPane_3.setBounds(469, 177, 288, 89);
@@ -112,17 +112,17 @@ public class Vista {
 
 		textAreaEscibir = new JTextArea();
 		scrollPane_3.setViewportView(textAreaEscibir);
-		
+
 		JLabel lblNewLabel = new JLabel("Directorios");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel.setBounds(692, 29, 65, 14);
 		frame.getContentPane().add(lblNewLabel);
-		
+
 		JLabel lblFicheros = new JLabel("Ficheros");
 		lblFicheros.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblFicheros.setBounds(701, 79, 56, 14);
 		frame.getContentPane().add(lblFicheros);
-		
+
 		JLabel lblOpciones = new JLabel("Opciones");
 		lblOpciones.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblOpciones.setBounds(701, 125, 56, 14);
@@ -132,88 +132,98 @@ public class Vista {
 	}
 
 	/**
-	 * get del botón buscar
-	 * @return retorna el botónBuscar
-	 * */
+	 * Get del botón buscar
+	 * 
+	 * @return Retorna el boton buscar
+	 */
 	public JButton getBtnBuscar() {
 		return btnBuscar;
 	}
 
 	/**
-	 * get del botón reemplazar
-	 * @return retorna el botónReemplazar
-	 * */
+	 * Get del boton reemplazar
+	 * 
+	 * @return Retorna el boton reemplazar
+	 */
 	public JButton getBtnReemplazar() {
 		return btnReemplazar;
 	}
 
 	/**
-	 * get del botón aceptar
-	 * @return retorna el botónAceptar
-	 * */
+	 * Get del boton aceptar
+	 * 
+	 * @return Retorna el boton aceptar
+	 */
 	public JButton getBtnAceptar() {
 		return btnAceptar;
 	}
 
 	/**
-	 * get del textField buscar
-	 * @return retorna el textFieldBuscar
-	 * */
+	 * Get del textField buscar
+	 * 
+	 * @return Retorna el textFieldBuscar
+	 */
 	public JTextField getTextFieldBuscar() {
 		return textField_Buscar;
 	}
 
 	/**
-	 * get del textField reemplazar
-	 * @return retorna el textFielReemplazar
-	 * */
+	 * Get del textField reemplazar
+	 * 
+	 * @return Retorna el textFielReemplazar
+	 */
 	public JTextField getTextFieldReemplazar() {
 		return textField_Reemplazar;
 	}
 
 	/**
-	 * get del textArea original
-	 * @return retorna el textAreaOriginal
-	 * */
+	 * Get del textArea original
+	 * 
+	 * @return Retorna el textAreaOriginal
+	 */
 	public JTextArea getTextAreaOriginal() {
 		return textArea_Original;
 	}
 
 	/**
-	 * get del textArea info
-	 * @return retorna el textAreaInfo
-	 * */
+	 * Get del textArea info
+	 * 
+	 * @return Retorna el textAreaInfo
+	 */
 	public JTextArea getTextAreaInfo() {
 		return textArea_info;
 	}
 
 	/**
-	 * get del textArea escribir
-	 * @return retorna el textAreaEscribir
-	 * */
+	 * Get del textArea escribir
+	 * 
+	 * @return Retorna el textAreaEscribir
+	 */
 	public JTextArea getTextAreaEscribir() {
 		return textAreaEscibir;
 	}
 
 	/**
-	 * get del textArea modificado
-	 * @return retorna el textAreaModificado
-	 * */
+	 * Get del textArea modificado
+	 * 
+	 * @return Retorna el textAreaModificado
+	 */
 	public JTextArea getTextAreaModificado() {
 		return textArea_Modificado;
 	}
 
 	/**
-	 * get del combobox de los directorios
-	 * @return retorna el combobox
-	 * */
+	 * Get del combobox de los directorios
+	 * 
+	 * @return Retorna el combobox
+	 */
 	public JComboBox<String> getComboBoxDirectorios() {
 		return comboBox_directorios;
 	}
 
 	/**
-	 * setea el contenido del combobox de los directorios
-	 * */
+	 * Establece el contenido del combobox de los directorios
+	 */
 	public void setComboBoxDirectorios(String[] directorios) {
 
 		JComboBox<String> combo = getComboBoxDirectorios();
@@ -225,8 +235,8 @@ public class Vista {
 	}
 
 	/**
-	 * setea el contenido del combobox de los ficheros
-	 * */
+	 * Establece el contenido del combobox de los ficheros
+	 */
 	public void setComboBoxFicheros(String[] ficheros) {
 
 		JComboBox<String> combo = getComboBoxFicheros();
@@ -238,16 +248,17 @@ public class Vista {
 	}
 
 	/**
-	 * get del combobox de los ficheros
-	 * @return retorna el combobox
-	 * */
+	 * Get del combobox de los ficheros
+	 * 
+	 * @return Retorna el combobox
+	 */
 	public JComboBox<String> getComboBoxFicheros() {
 		return comboBox_ficheros;
 	}
 
 	/**
-	 * setea el contenido del combobox de las opciones
-	 * */
+	 * Establece el contenido del combobox de las opciones
+	 */
 	public void setComboBoxOpciones() {
 
 		JComboBox<String> combo = getComboBoxOpciones();
@@ -263,9 +274,10 @@ public class Vista {
 	}
 
 	/**
-	 * get del combobox de las opciones
-	 * @return retorna el combobox
-	 * */
+	 * Get del combobox de las opciones
+	 * 
+	 * @return Retorna el combobox
+	 */
 	public JComboBox<String> getComboBoxOpciones() {
 		return comboBox_opciones;
 	}

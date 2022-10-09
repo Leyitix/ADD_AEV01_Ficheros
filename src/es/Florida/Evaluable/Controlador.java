@@ -21,11 +21,11 @@ public class Controlador {
 	private String[] ficheros, directorios;
 
 	/**
-	 * Método constructor del Controlador
+	 * Metodo constructor del Controlador
 	 * 
-	 * @param modelo: recibe los datatos de los ficheros desde la clase modelo,
-	 *                vista: recibe los elementos de la interfaz gráfica, 
-	 *                control(): ejecuta las funciones del controlador
+	 * @param El modelo recibe los datos de los ficheros desde la clase modelo, la
+	 *           vista recibe los elementos de la interfaz grafica, y el control()
+	 *           ejecuta las funciones del controlador
 	 */
 	public Controlador(Modelo modelo, Vista vista) {
 		this.modelo = modelo;
@@ -34,8 +34,8 @@ public class Controlador {
 	}
 
 	/**
-	 * Método que recibe los eventos de los diferentes elementos de la interfaz y
-	 * los textos introducidos en el textArea, he interactúa determinados métodos
+	 * Metodo que recibe los eventos de los diferentes elementos de la interfaz y
+	 * los textos introducidos en el textArea, he interactua determinados metodos
 	 */
 	private void control() {
 
@@ -128,11 +128,11 @@ public class Controlador {
 	}
 
 	/**
-	 * Envía el fichero seleccionado y el directorio a dos métodos diferentes del
-	 * modelo un para mostrat su contenido y otro para mostrar la información en
+	 * Envia el fichero seleccionado y el directorio a dos metodos diferentes del
+	 * modelo un para mostrat su contenido y otro para mostrar la informacion en
 	 * diferentes textAreas
 	 * 
-	 * @param recibe string ficheroSeleccionado, un int numeroTextArea
+	 * @param Recibe string ficheroSeleccionado, un int numeroTextArea
 	 */
 	protected void mostrarFichero(String ficheroSeleccionado, int numeroTextArea) {
 		vista.getTextAreaOriginal().setText("");
@@ -156,10 +156,10 @@ public class Controlador {
 	}
 
 	/**
-	 * Dependiendo de cual ha sido la opción seleccionada llamará a un determinado
-	 * método
+	 * Dependiendo de cual ha sido la opción seleccionada llamara a un determinado
+	 * metodo
 	 * 
-	 * @param recide String texto del textAreaAceptar
+	 * @param Recide String texto del textAreaAceptar
 	 */
 	protected void opcionesComboBox(String texto) {
 
@@ -222,12 +222,12 @@ public class Controlador {
 	}
 
 	/**
-	 * Envía el nombre del fichero original, el texto para renombrar el fichero y el
-	 * directorio seleccionado al modelo Antes de enviar la información comprueba
-	 * que el texto tenga la extensión .txt y si no la encuentra lanza un mensaje de
-	 * error Al terminar resetea el combobox de los ficheros
+	 * Envia el nombre del fichero original, el texto para renombrar el fichero y el
+	 * directorio seleccionado al modelo, antes de enviar la informacion comprueba
+	 * que el texto tenga la extension .txt y si no la encuentra lanza un mensaje de
+	 * error, al terminar resetea el combobox de los ficheros
 	 * 
-	 * @param recibe String textoTextAreaEscribir del textArea *
+	 * @param Recibe String textoTextAreaEscribir del textArea
 	 */
 	protected void renombrarFichero(String textoTextAreaEscribir) {
 		String oldFile = getFicheroSeleccionado();
@@ -244,7 +244,7 @@ public class Controlador {
 	}
 
 	/**
-	 * Envía el fichero seleccionado a copiar y el directorio a la clase modelo Al
+	 * Envia el fichero seleccionado a copiar y el directorio a la clase modelo, al
 	 * terminar resetea el combobox de los ficheros
 	 */
 	protected void copiarFichero() {
@@ -255,8 +255,8 @@ public class Controlador {
 	}
 
 	/**
-	 * Envía el fichero seleccionado a eliminar y el directorio a la clase modelo Al
-	 * terminar resetea el combobox de los ficheros
+	 * Envia el fichero seleccionado a eliminar y el directorio a la clase modelo,
+	 * al terminar resetea el combobox de los ficheros
 	 */
 	protected void eliminarFichero() {
 		String ficheroSeleccionado = getFicheroSeleccionado();
@@ -266,12 +266,12 @@ public class Controlador {
 	}
 
 	/**
-	 * Envía el fichero seleccionado en el cual se quiere escribir, el directorio y
-	 * el texto a insertar a la clase modelo Al terminar elimina el texto que se
-	 * encuentre en la caja de texto escribir, al igual que vacía el resto de text
-	 * area para mostrar la información actualizada
+	 * Envia el fichero seleccionado en el cual se quiere escribir, el directorio y
+	 * el texto a insertar a la clase modelo, al terminar elimina el texto que se
+	 * encuentre en la caja de texto escribir, al igual que vacia el resto de text
+	 * area para mostrar la informacion actualizada
 	 * 
-	 * @param recibe el String texto del textAreaEscribir
+	 * @param Recibe el String texto del textAreaEscribir
 	 */
 	protected void escribirEnFichero(String texto) {
 		String directorioSeleccionado = getDirectorioSeleccionado();
@@ -284,7 +284,7 @@ public class Controlador {
 	}
 
 	/**
-	 * resetea el contenido del combobox de los ficheros para tener los elementos
+	 * Resetea el contenido del combobox de los ficheros para tener los elementos
 	 * siempre acrualizados
 	 */
 	protected void resetComboBoxFicheros() {
@@ -294,91 +294,91 @@ public class Controlador {
 	}
 
 	/**
-	 * get de la clase vista
+	 * Get de la clase vista
 	 * 
-	 * @return retorna la clase vista para acceder a sus métodos
+	 * @return Retorna la clase vista para acceder a sus metodos
 	 */
 	public Vista getVista() {
 		return vista;
 	}
 
 	/**
-	 * get de la clase modelo
+	 * Get de la clase modelo
 	 * 
-	 * @return retorna la clase modelo para acceder a sus métodos
+	 * @return Retorna la clase modelo para acceder a sus metodos
 	 */
 	public Modelo getModelo() {
 		return modelo;
 	}
 
 	/**
-	 * get del fichero escritura
+	 * Get del fichero escritura
 	 * 
-	 * @return retorna lel fichero escritura
+	 * @return Retorna lel fichero escritura
 	 */
 	public String getFicheroEscritura() {
 		return ficheroEscritura;
 	}
 
 	/**
-	 * set del fichero escritura *
+	 * Set del fichero escritura *
 	 */
 	public void setFicheroEscritura(String ficheroEscritura) {
 		this.ficheroEscritura = ficheroEscritura;
 	}
 
 	/**
-	 * get del directorio seleccionado del comboBox de los directorios
+	 * Get del directorio seleccionado del comboBox de los directorios
 	 * 
-	 * @return retorna el directorio seleccionado
+	 * @return Retorna el directorio seleccionado
 	 */
 	public String getDirectorioSeleccionado() {
 		return directorioSeleccionado;
 	}
 
 	/**
-	 * get del fichero seleccionado del comboBox de los ficheros
+	 * Get del fichero seleccionado del comboBox de los ficheros
 	 * 
-	 * @return retorna lel fichero escritura
+	 * @return Retorna lel fichero escritura
 	 */
 	public String getFicheroSeleccionado() {
 		return ficheroSeleccionado;
 	}
 
 	/**
-	 * set del directorio seleccionado del comboBox de los directorios
+	 * Set del directorio seleccionado del comboBox de los directorios
 	 */
 	public void setDirectorioSeleccionado(String directorio) {
 		this.directorioSeleccionado = directorio;
 	}
 
 	/**
-	 * get del item seleccionado del comboBox de las opciones
+	 * Get del item seleccionado del comboBox de las opciones
 	 * 
-	 * @return retorna item seleccionado
+	 * @return Retorna item seleccionado
 	 */
 	public String getItemSeleccionado() {
 		return itemSeleccionado;
 	}
 
 	/**
-	 * set del item seleccionado del comboBox de las opciones
+	 * Set del item seleccionado del comboBox de las opciones
 	 */
 	public void setItemSeleccionado(String itemSeleccionado) {
 		this.itemSeleccionado = itemSeleccionado;
 	}
 
 	/**
-	 * get de los ficheros
+	 * Get de los ficheros
 	 * 
-	 * @return retorna los ficheros del directorio seleccionado
+	 * @return Retorna los ficheros del directorio seleccionado
 	 */
 	public String[] getFicheros() {
 		return ficheros;
 	}
 
 	/**
-	 * set de los ficheros
+	 * Set de los ficheros
 	 */
 	public void setFicheros(String[] ficheros) {
 		this.ficheros = ficheros;
